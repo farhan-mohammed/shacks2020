@@ -1,0 +1,51 @@
+@mixin mobile() {
+    @media (max-width: 500px), (max-height: 900px) {
+        @content;
+    }
+}
+.bod {
+    position: relative;
+    &-phone {
+        width: 450px;
+        height: 875px;
+        position: fixed;
+        top: 50%;
+        right: 50%;
+        transform: translateX(50%) translateY(-50%);
+        z-index: -1;
+        @include mobile() {
+            display: none;
+        }
+    }
+    &-content {
+        width: 450px;
+        height: 875px;
+        position: fixed;
+        top: 50%;
+        right: 50%;
+        transform: translateX(50%) translateY(-50%);
+        z-index: -1;
+        box-sizing: border-box;
+        @include mobile() {
+            width: 100vw;
+            height: 100vh;
+        }
+        padding: 64px 36px 35px;
+        color: #fff;
+    }
+}
+body,
+html {
+    overflow: hidden;
+    background-color: red;
+    @include mobile() {
+        background-color: #fff;
+    }
+}
+.content {
+    position: relative;
+    background-color: #0e0;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
