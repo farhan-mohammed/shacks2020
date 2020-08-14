@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Header from '../Header';
 import Chat from './Chat';
+import ScotiaLink from './ScotiaLink';
 export default class FrameChat extends Component {
 	render() {
 		return (
@@ -36,7 +37,12 @@ export default class FrameChat extends Component {
 							},
 							{
 								s: 'nova',
-								message: <span>To read more visit this article:</span>
+								message: (
+									<span>
+										To read more visit this article:
+										<ScotiaLink link="d" text="Understanding the stock market" />
+									</span>
+								)
 							}
 						]}
 					/>

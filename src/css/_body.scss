@@ -256,3 +256,25 @@ html {
 		}
 	}
 }
+
+.sl {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+	background-color: #fff8f8;
+	border-radius: 5px;
+	padding: 5px;
+	box-sizing: border-box;
+	& > img {
+		height: 40px;
+	}
+	&:active,
+	&,
+	&:hover,
+	&:visited {
+		color: black;
+		text-decoration: none;
+	}
+}
