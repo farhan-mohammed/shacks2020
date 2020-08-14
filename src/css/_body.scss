@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
 $dg: #15795d;
-$pink: #e26464;
+$pink: #ec111b;
 $spec-font: 'Open Sans';
 @mixin mobile() {
     @media (max-width: 500px), (max-height: 900px) {
@@ -21,7 +21,7 @@ $spec-font: 'Open Sans';
         top: 50%;
         right: 50%;
         transform: translateX(50%) translateY(-50%);
-        z-index: -1;
+        z-index: 100;
         @include mobile() {
             display: none;
         }
@@ -29,6 +29,7 @@ $spec-font: 'Open Sans';
     &-content {
         width: 455px;
         height: 875px;
+        max-height: 875px;
         position: fixed;
         top: 50%;
         right: 50%;
@@ -36,7 +37,7 @@ $spec-font: 'Open Sans';
         z-index: -1;
         box-sizing: border-box;
         color: #fff;
-        padding: 64px 36px 35px;
+        padding: 0 36px 0;
         @include mobile() {
             width: 100vw;
             height: 100vh;
@@ -59,9 +60,14 @@ html {
     background-color: #f6f6f6;
     border-radius: 30px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 1px);
+    max-height: 100%;
+    padding: 64px 0 35px;
+
+    box-sizing: border-box;
     @include mobile() {
         border-radius: 0;
+        margin: 0;
     }
 
     display: flex;
@@ -91,6 +97,10 @@ html {
             border-top-right-radius: 30px;
             border-top-left-radius: 30px;
         }
+    }
+    &-frame {
+        flex: 1;
+        background-size: contain;
     }
 }
 .cn {

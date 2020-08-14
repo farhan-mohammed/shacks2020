@@ -16,7 +16,7 @@
   right: 50%;
   -webkit-transform: translateX(50%) translateY(-50%);
           transform: translateX(50%) translateY(-50%);
-  z-index: -1;
+  z-index: 100;
 }
 
 @media (max-width: 500px), (max-height: 900px) {
@@ -28,6 +28,7 @@
 .bod-content {
   width: 455px;
   height: 875px;
+  max-height: 875px;
   position: fixed;
   top: 50%;
   right: 50%;
@@ -37,7 +38,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
-  padding: 64px 36px 35px;
+  padding: 0 36px 0;
 }
 
 @media (max-width: 500px), (max-height: 900px) {
@@ -69,7 +70,11 @@ html {
   background-color: #f6f6f6;
   border-radius: 30px;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 1px);
+  max-height: 100%;
+  padding: 64px 0 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,6 +87,7 @@ html {
 @media (max-width: 500px), (max-height: 900px) {
   .content {
     border-radius: 0;
+    margin: 0;
   }
 }
 
@@ -121,6 +127,13 @@ html {
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
   }
+}
+
+.content-frame {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-size: contain;
 }
 
 .cnh-con {
@@ -180,7 +193,7 @@ html {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #e26464;
+  background-color: #ec111b;
   border-radius: 30px;
 }
 
