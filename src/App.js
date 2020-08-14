@@ -72,7 +72,7 @@ export default class App extends Component {
 								<li>
 									<a href="https://www.figma.com/proto/ahDboeS5rTVZsp1HCHqt5N/SHacks-2020">Figma</a>
 									<ul stlye={{ fontFamily: 'inherit' }}>
-										<li>For our full prototype</li>
+										<li>For our visual prototype</li>
 									</ul>
 								</li>
 								<li>
