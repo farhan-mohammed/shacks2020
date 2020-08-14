@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Base from './components/Base';
+import Header from './components/Header';
 
 export default class App extends Component {
     render() {
@@ -7,7 +9,13 @@ export default class App extends Component {
                 <img className="bod-phone" alt="" src={require('./media/phone.png')} />
                 <div className="bod-content">
                     <div className="content">
-                        <input></input>
+                        <div className="content-header">
+                            <Header></Header>
+                        </div>
+                        <div className="content-chat">chat</div>
+                        <div className="content-base">
+                            <Base></Base>
+                        </div>
                     </div>
                 </div>
             </div>

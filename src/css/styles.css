@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@font-face {
+  font-family: 'futurabold';
+  src: url("fonts/futurebold.ttf");
+}
+
 .bod {
   position: relative;
 }
@@ -30,14 +36,15 @@
   z-index: -1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 64px 36px 35px;
   color: #fff;
+  padding: 64px 36px 35px;
 }
 
 @media (max-width: 500px), (max-height: 900px) {
   .bod-content {
     width: 100vw;
     height: 100vh;
+    padding: 0;
   }
 }
 
@@ -56,9 +63,96 @@ html {
 
 .content {
   position: relative;
-  background-color: #0e0;
+  background-color: #f6f6f6;
   border-radius: 30px;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 500px), (max-height: 900px) {
+  .content {
+    border-radius: 0;
+  }
+}
+
+.content-header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+  background-color: #fff;
+  max-height: 80px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.content-chat {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.content-base {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 130px;
+          flex: 0 0 130px;
+  background-color: #e26464;
+  color: #fff;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.cnh-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.cnh-img {
+  width: 40px;
+  height: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 500px), (max-height: 900px) {
+  .cnh-img {
+    margin-top: 5px;
+  }
+}
+
+.cnh-img > img {
+  height: 100%;
+  width: 100%;
+}
+
+.cnh-name {
+  font-family: 'futurabold';
+  margin-top: 3px;
+  color: #15795d;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.5px;
 }
 /*# sourceMappingURL=styles.css.map */

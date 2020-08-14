@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+$dg: #15795d;
+$pink: #e26464;
+$spec-font: 'Open Sans';
 @mixin mobile() {
     @media (max-width: 500px), (max-height: 900px) {
         @content;
     }
+}
+@font-face {
+    font-family: 'futurabold';
+    src: url('fonts/futurebold.ttf');
 }
 .bod {
     position: relative;
@@ -26,12 +35,13 @@
         transform: translateX(50%) translateY(-50%);
         z-index: -1;
         box-sizing: border-box;
+        color: #fff;
+        padding: 64px 36px 35px;
         @include mobile() {
             width: 100vw;
             height: 100vh;
+            padding: 0;
         }
-        padding: 64px 36px 35px;
-        color: #fff;
     }
 }
 body,
@@ -44,8 +54,66 @@ html {
 }
 .content {
     position: relative;
-    background-color: #0e0;
+    background-color: #f6f6f6;
     border-radius: 30px;
     width: 100%;
     height: 100%;
+    @include mobile() {
+        border-radius: 0;
+    }
+
+    display: flex;
+    flex-direction: column;
+    &-header {
+        flex: 0 0 80px;
+        background-color: #fff;
+        max-height: 80px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    &-chat {
+        flex: 1;
+    }
+    &-base {
+        flex: 0 0 130px;
+        background-color: $pink;
+        color: #fff;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+}
+.cn {
+    &h {
+        &-con {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        &-img {
+            width: 40px;
+            height: 50px;
+            position: relative;
+            z-index: 1;
+            @include mobile() {
+                margin-top: 5px;
+            }
+            & > img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        &-name {
+            font-family: 'futurabold';
+            margin-top: 3px;
+            color: $dg;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.5px;
+        }
+    }
 }
