@@ -37,7 +37,10 @@ export default class FrameChat extends Component {
 					message: (
 						<span>
 							To read more visit this article:
-							<ScotiaLink link="d" text="Understanding the stock market" />
+							<ScotiaLink
+								link="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/education/understanding-the-stock-market.html"
+								text="Understanding the stock market"
+							/>
 						</span>
 					)
 				}
@@ -56,14 +59,29 @@ export default class FrameChat extends Component {
 				message: (
 					<span>
 						Currently I know terms related to{' '}
-						<a href="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/investment-types/bonds.html">
+						<a
+							href="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/investment-types/bonds.html"
+							// eslint-disable-next-line
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							bonds
 						</a>,{' '}
-						<a href="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/investment-types/stocks.html">
+						<a
+							href="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/investment-types/stocks.html"
+							// eslint-disable-next-line
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							stocks
 						</a>{' '}
 						and{' '}
-						<a href="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/investment-types/gics.html">
+						<a
+							href="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/investment-types/gics.html"
+							// eslint-disable-next-line
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							GICs
 						</a>{' '}
 						so ask me about any terms related to these topics!
