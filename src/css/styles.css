@@ -84,7 +84,7 @@
 
 .bod-left {
   position: fixed;
-  left: calc(50% - 150px);
+  left: calc(60% - 150px);
   top: 50%;
   height: 875px;
   -webkit-transform: translateY(-50%) translateX(-100%) scale(0.75);
@@ -97,13 +97,15 @@
   position: fixed;
   z-index: -1;
   top: 50%;
-  right: 50%;
+  right: 40%;
   -webkit-transform: translateX(50%) translateY(-50%) scale(0.75);
           transform: translateX(50%) translateY(-50%) scale(0.75);
 }
 
 @media (max-width: 500px) and (max-height: 700px) {
   .bod-phone {
+    top: 50%;
+    right: 50%;
     display: none;
     -webkit-transform: translateX(50%) translateY(-50%);
             transform: translateX(50%) translateY(-50%);
@@ -116,7 +118,7 @@
   max-height: 875px;
   position: fixed;
   top: 50%;
-  right: 50%;
+  right: 40%;
   -webkit-transform: translateX(50%) translateY(-50%) scale(0.75);
           transform: translateX(50%) translateY(-50%) scale(0.75);
   z-index: -1;
@@ -128,6 +130,8 @@
 
 @media (max-width: 500px) and (max-height: 700px) {
   .bod-content {
+    top: 50%;
+    right: 50%;
     width: 100vw;
     height: 100vh;
     max-height: 100vh;

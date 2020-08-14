@@ -78,9 +78,8 @@ $spec-font: 'Open Sans';
 	position: relative;
 	&-left {
 		position: fixed;
-		left: calc(50% - 150px);
+		left: calc(60% - 150px);
 		top: 50%;
-
 		height: 875px;
 
 		transform: translateY(-50%) translateX(-100%) scale(0.75);
@@ -91,9 +90,11 @@ $spec-font: 'Open Sans';
 		position: fixed;
 		z-index: -1;
 		top: 50%;
-		right: 50%;
+		right: 40%;
 		transform: translateX(50%) translateY(-50%) scale(0.75);
 		@include mobile() {
+			top: 50%;
+			right: 50%;
 			display: none;
 			transform: translateX(50%) translateY(-50%);
 		}
@@ -104,13 +105,15 @@ $spec-font: 'Open Sans';
 		max-height: 875px;
 		position: fixed;
 		top: 50%;
-		right: 50%;
+		right: 40%;
 		transform: translateX(50%) translateY(-50%) scale(0.75);
 		z-index: -1;
 		box-sizing: border-box;
 		color: #fff;
 		padding: 64px 36px 35px;
 		@include mobile() {
+			top: 50%;
+			right: 50%;
 			width: 100vw;
 			height: 100vh;
 			max-height: 100vh;
