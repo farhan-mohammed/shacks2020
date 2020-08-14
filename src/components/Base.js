@@ -1,16 +1,26 @@
 import React, { Component, Fragment } from 'react';
 // import Dialect from './voice/Dialect';
 const row = [
-    { id: 'home', icon: <span class="iconify" data-icon="carbon:home" data-inline="false"></span> },
+    { id: 'home', img: require('../media/icons/home.png') },
     {
         id: 'course',
-        icon: <span class="iconify" data-icon="mdi:book-outline" data-inline="false"></span>,
+        img: require('../media/icons/book.png'),
     },
-    { id: 'home', icon: <span class="iconify" data-icon="carbon:home" data-inline="false"></span> },
-    { id: 'home', icon: <span class="iconify" data-icon="carbon:home" data-inline="false"></span> },
+    { id: 'chatbot', img: require('../media/icons/chatbot.png') },
+    { id: 'settings', img: require('../media/icons/settings.png') },
 ];
 export default class Base extends Component {
     render() {
-        return <Fragment>xd</Fragment>;
+        return (
+            <Fragment>
+                <div className="cnb-con">
+                    {row.map(({ id, img }) => (
+                        <div className="cnb-item" key={id}>
+                            <img src={img} alt={id}></img>
+                        </div>
+                    ))}
+                </div>
+            </Fragment>
+        );
     }
 }
