@@ -10,6 +10,9 @@ export default class App extends Component {
             cur: 0,
         };
     }
+    componentDidUpdate() {
+        console.log('f');
+    }
     render() {
         const Frames = [
             <FrameOne next={() => this.setState({ cur: 1 })}></FrameOne>,

@@ -12,11 +12,11 @@
   width: 450px;
   height: 875px;
   position: fixed;
+  z-index: -1;
   top: 50%;
   right: 50%;
   -webkit-transform: translateX(50%) translateY(-50%);
           transform: translateX(50%) translateY(-50%);
-  z-index: 100;
 }
 
 @media (max-width: 500px), (max-height: 900px) {
@@ -38,7 +38,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
-  padding: 0 36px 0;
+  padding: 64px 36px 35px;
 }
 
 @media (max-width: 500px), (max-height: 900px) {
@@ -68,11 +68,12 @@ html {
 .content {
   position: relative;
   background-color: #f6f6f6;
-  border-radius: 30px;
-  width: 100%;
+  padding: 0 2px;
+  margin: 0 2px;
+  width: calc(100%-4px);
   height: calc(100% - 1px);
   max-height: 100%;
-  padding: 64px 0 35px;
+  border-radius: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -95,6 +96,7 @@ html {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 80px;
           flex: 0 0 80px;
+  margin: 2px 0;
   background-color: #fff;
   max-height: 80px;
   border-bottom-right-radius: 30px;
@@ -117,7 +119,6 @@ html {
           box-sizing: border-box;
   position: relative;
   top: 5px;
-  background-color: #fff;
   border-radius: 30px;
 }
 
@@ -134,6 +135,8 @@ html {
       -ms-flex: 1;
           flex: 1;
   background-size: contain;
+  position: relative;
+  z-index: 600;
 }
 
 .cnh-con {

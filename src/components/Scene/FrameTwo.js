@@ -5,7 +5,10 @@ export default class FrameOne extends Component {
         return (
             <div
                 className="content-frame"
-                onClick={this.props.next}
+                onClick={() => {
+                    console.log('f');
+                    this.props.next();
+                }}
                 style={{ backgroundImage: 'url(' + require('../../media/f2.png') + ')' }}
             ></div>
         );
