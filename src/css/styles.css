@@ -162,6 +162,10 @@ html {
   height: 50px;
   position: relative;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (max-width: 500px), (max-height: 900px) {
@@ -176,6 +180,10 @@ html {
 }
 
 .cnh-name {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-family: 'futurabold';
   margin-top: 3px;
   color: #15795d;
