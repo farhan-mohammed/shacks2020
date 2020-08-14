@@ -4,169 +4,255 @@ $dg: #15795d;
 $pink: #ec111b;
 $spec-font: 'Open Sans';
 @mixin mobile() {
-    @media (max-width: 500px), (max-height: 900px) {
-        @content;
-    }
+	@media (max-width: 500px), (max-height: 900px) {
+		@content;
+	}
 }
 @font-face {
-    font-family: 'futurabold';
-    src: url('fonts/futurebold.ttf');
+	font-family: 'futurabold';
+	src: url('fonts/futurebold.ttf');
 }
 .bod {
-    position: relative;
-    &-phone {
-        width: 450px;
-        height: 875px;
-        position: fixed;
-        z-index: -1;
-        top: 50%;
-        right: 50%;
-        transform: translateX(50%) translateY(-50%);
-        @include mobile() {
-            display: none;
-        }
-    }
-    &-content {
-        width: 455px;
-        height: 875px;
-        max-height: 875px;
-        position: fixed;
-        top: 50%;
-        right: 50%;
-        transform: translateX(50%) translateY(-50%);
-        z-index: -1;
-        box-sizing: border-box;
-        color: #fff;
-        padding: 64px 36px 35px;
-        @include mobile() {
-            width: 100vw;
-            height: 100vh;
-            max-height: 100vh;
-            box-sizing: border-box;
-            padding: 0;
-        }
-    }
+	position: relative;
+	&-phone {
+		width: 450px;
+		height: 875px;
+		position: fixed;
+		z-index: -1;
+		top: 50%;
+		right: 50%;
+		transform: translateX(50%) translateY(-50%);
+		@include mobile() {
+			display: none;
+		}
+	}
+	&-content {
+		width: 455px;
+		height: 875px;
+		max-height: 875px;
+		position: fixed;
+		top: 50%;
+		right: 50%;
+		transform: translateX(50%) translateY(-50%);
+		z-index: -1;
+		box-sizing: border-box;
+		color: #fff;
+		padding: 64px 36px 35px;
+		@include mobile() {
+			width: 100vw;
+			height: 100vh;
+			max-height: 100vh;
+			box-sizing: border-box;
+			padding: 0;
+		}
+	}
 }
 body,
 html {
-    overflow: hidden;
-    background-color: red;
-    @include mobile() {
-        background-color: #fff;
-    }
+	overflow: hidden;
+	background-color: red;
+	@include mobile() {
+		background-color: #fff;
+	}
 }
 .content {
-    position: relative;
-    background-color: #f6f6f6;
-    padding: 0 2px;
-    margin: 0 2px;
-    width: calc(100%-4px);
-    height: calc(100% - 1px);
-    max-height: 100%;
-    border-radius: 50px;
-    // padding: 64px 0 35px;
+	position: relative;
+	background-color: #f6f6f6;
+	padding: 0 2px;
+	margin: 0 2px;
+	width: calc(100%-4px);
+	height: calc(100% - 1px);
+	max-height: 100%;
+	border-radius: 50px;
+	// padding: 64px 0 35px;
 
-    box-sizing: border-box;
-    @include mobile() {
-        border-radius: 0;
-        margin: 0;
-    }
+	box-sizing: border-box;
+	@include mobile() {
+		border-radius: 0;
+		margin: 0;
+	}
 
-    display: flex;
-    flex-direction: column;
-    &-header {
-        flex: 0 0 80px;
-        margin: 2px 0;
-        background-color: #fff;
-        max-height: 80px;
-        border-bottom-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-    &-chat {
-        flex: 1;
-    }
-    &-base {
-        flex: 0 0 75px;
-        color: #fff;
-        max-height: 80px;
-        box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	&-word {
+		color: #000;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 0 5px 0;
+		background-color: #fff;
+		& > div {
+			margin: 0 10px;
+		}
+		&__input {
+			flex: 1;
+			& > input {
+				display: block;
+				width: 100%;
+				border-radius: 50px;
+				padding: 8px 10px;
+				font-size: 16px;
+				border-color: #c4c4c4;
+				&:focus {
+					outline: none;
+				}
+			}
+			padding: 0 30px 2px 10px;
+		}
+		&__send {
+			width: 30px;
+			cursor: pointer;
+			height: 30px;
+			> img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		&__microphone {
+			width: 30px;
+			height: 30px;
+			> img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+	&-header {
+		flex: 0 0 80px;
+		margin: 2px 0;
+		background-color: #fff;
+		max-height: 80px;
+		border-bottom-right-radius: 30px;
+		border-bottom-left-radius: 30px;
+	}
+	&-chat {
+		flex: 1;
+	}
+	&-base {
+		flex: 0 0 75px;
+		color: #fff;
+		max-height: 80px;
+		box-sizing: border-box;
 
-        position: relative;
-        top: 5px;
-        border-radius: 30px;
-        @include mobile() {
-            border-radius: 0;
-            border-top-right-radius: 30px;
-            border-top-left-radius: 30px;
-        }
-    }
-    &-frame {
-        flex: 1;
-        background-size: contain;
-        position: relative;
-        z-index: 600;
-    }
+		position: relative;
+		top: 5px;
+		border-radius: 30px;
+		@include mobile() {
+			border-radius: 0;
+			border-top-right-radius: 30px;
+			border-top-left-radius: 30px;
+		}
+	}
+	&-frame {
+		flex: 1;
+		background-size: contain;
+		position: relative;
+		z-index: 600;
+	}
 }
 .cn {
-    &h {
-        &-con {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            border-bottom-right-radius: 30px;
-            border-bottom-left-radius: 30px;
-        }
-        &-img {
-            width: 40px;
-            height: 50px;
-            position: relative;
-            z-index: 1;
-            user-select: none;
-            @include mobile() {
-                margin-top: 5px;
-            }
-            & > img {
-                height: 100%;
-                width: 100%;
-            }
-        }
-        &-name {
-            user-select: none;
-            font-family: 'futurabold';
-            margin-top: 3px;
-            color: $dg;
-            position: relative;
-            z-index: 2;
-            letter-spacing: 0.5px;
-        }
-    }
-    &b {
-        &-con {
-            padding: 0 4px;
-            display: flex;
-            align-items: center;
-            height: 100%;
-            justify-content: space-evenly;
-            background-color: $pink;
+	&h {
+		&-con {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			border-bottom-right-radius: 30px;
+			border-bottom-left-radius: 30px;
+		}
+		&-img {
+			width: 50px;
+			height: 50px;
+			position: relative;
+			z-index: 1;
+			user-select: none;
+			@include mobile() {
+				margin-top: 5px;
+			}
+			& > img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		&-name {
+			user-select: none;
+			font-family: 'futurabold';
+			color: $dg;
+			position: relative;
+			margin-top: 2px;
+			z-index: 2;
+			letter-spacing: 0.5px;
+		}
+	}
+	&b {
+		&-con {
+			padding: 0 4px;
+			display: flex;
+			align-items: center;
+			height: 100%;
+			justify-content: space-evenly;
+			background-color: $pink;
 
-            border-radius: 30px;
-            @include mobile() {
-                border-radius: 0;
-                border-top-right-radius: 30px;
-                border-top-left-radius: 30px;
-            }
-        }
-        &-item {
-            height: 25px;
-            &:nth-child(3) {
-                background-color: #f4c6c6;
-            }
-            padding: 10px 20px;
-            border-radius: 50px;
-            & > img {
-                height: 100%;
-            }
-        }
-    }
+			border-radius: 30px;
+			@include mobile() {
+				border-radius: 0;
+				border-top-right-radius: 30px;
+				border-top-left-radius: 30px;
+			}
+		}
+		&-item {
+			height: 25px;
+			&:nth-child(3) {
+				background-color: #f4c6c6;
+			}
+			padding: 10px 20px;
+			border-radius: 50px;
+			& > img {
+				height: 100%;
+			}
+		}
+	}
+}
+
+.chat {
+	&-con {
+		max-height: 100%;
+		color: #000;
+		overflow-y: auto;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	&-message {
+		padding: 10px 20px 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		margin-bottom: 15px;
+		&.nova {
+			flex-direction: row-reverse;
+			& > .chat-bubble {
+				background-color: #15795d;
+				color: #fff;
+			}
+			& > .chat-person {
+				height: 35px;
+			}
+		}
+	}
+	&-bubble {
+		border-radius: 15px;
+		margin: 0 10px;
+		background-color: #e5e5e5;
+		color: #000;
+		max-width: 175px;
+		padding: 10px;
+	}
+	&-person {
+		width: 30px;
+		height: 30px;
+		& > img {
+			height: 100%;
+			width: 100%;
+		}
+	}
 }
