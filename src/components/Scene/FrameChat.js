@@ -62,7 +62,8 @@ export default class FrameChat extends Component {
 						<a href="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/investment-types/stocks.html">
 							stocks
 						</a>{' '}
-						and ,<a href="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/investment-types/gics.html">
+						and{' '}
+						<a href="https://www.scotiaitrade.com/en/direct-investing-and-online-trading/investment-types/gics.html">
 							GICs
 						</a>{' '}
 						so ask me about any terms related to these topics!
@@ -114,6 +115,11 @@ export default class FrameChat extends Component {
 								this.setState({ m: e.target.value });
 							}}
 							value={this.state.m}
+							onKeyDown={(e) => {
+								if (e.key === 'Enter') {
+									this.clickSend();
+								}
+							}}
 						/>
 					</div>
 					<div className="content-word__send" onClick={this.clickSend}>
