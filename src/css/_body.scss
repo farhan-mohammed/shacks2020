@@ -12,8 +12,29 @@ $spec-font: 'Open Sans';
 	font-family: 'futurabold';
 	src: url('fonts/futurebold.ttf');
 }
+.blb {
+	&-tit {
+		font-size: 45px;
+		font-family: 'arial';
+		letter-spacing: 3px;
+		color: white;
+		font-weight: 600;
+		& > span {
+			color: #15795d;
+		}
+	}
+}
 .bod {
 	position: relative;
+	&-left {
+		position: fixed;
+		left: calc(50% - 200px);
+		top: 50%;
+
+		height: 875px;
+
+		transform: translateY(-50%) translateX(-100%) scale(0.75);
+	}
 	&-phone {
 		width: 450px;
 		height: 875px;
@@ -157,6 +178,8 @@ html {
 	&-frame {
 		flex: 1;
 		background-size: contain;
+		background-repeat: no-repeat;
+		background-position-x: center;
 		position: relative;
 		z-index: 600;
 		cursor: pointer;

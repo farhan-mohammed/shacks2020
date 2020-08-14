@@ -22,6 +22,13 @@ export default class App extends Component {
 
 		return (
 			<div className="bod">
+				<div className="bod-left">
+					<div className="blb">
+						<div className="blb-tit">
+							Scotia <span>iLearn</span>
+						</div>
+					</div>
+				</div>
 				<img className="bod-phone" alt="" src={require('./media/phone.png')} />
 				<div className="bod-content">
 					<div className="content">

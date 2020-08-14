@@ -4,8 +4,29 @@
   src: url("fonts/futurebold.ttf");
 }
 
+.blb-tit {
+  font-size: 45px;
+  font-family: 'arial';
+  letter-spacing: 3px;
+  color: white;
+  font-weight: 600;
+}
+
+.blb-tit > span {
+  color: #15795d;
+}
+
 .bod {
   position: relative;
+}
+
+.bod-left {
+  position: fixed;
+  left: calc(50% - 200px);
+  top: 50%;
+  height: 875px;
+  -webkit-transform: translateY(-50%) translateX(-100%) scale(0.75);
+          transform: translateY(-50%) translateX(-100%) scale(0.75);
 }
 
 .bod-phone {
@@ -216,6 +237,8 @@ html {
       -ms-flex: 1;
           flex: 1;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
   position: relative;
   z-index: 600;
   cursor: pointer;
