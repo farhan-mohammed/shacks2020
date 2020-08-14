@@ -46,10 +46,10 @@ export default class FrameChat extends Component {
 						<input placeholder={'Message'} />
 					</div>
 					<div className="content-word__send">
-						<img src={require('../../media/icons/send.png')} />
+						<img src={require('../../media/icons/send.png')} alt="" />
 					</div>
 					<div className="content-word__microphone">
-						<img src={require('../../media/icons/micorphone.png')} />
+						<img src={require('../../media/icons/micorphone.png')} alt="" />
 					</div>
 				</div>
 			</Fragment>

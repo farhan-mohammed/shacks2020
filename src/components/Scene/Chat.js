@@ -18,6 +18,7 @@ export default class Chat extends Component {
 											require('../../media/mecircle.png')
 										)
 									}
+									alt=""
 								/>
 							</div>
 						</div>
