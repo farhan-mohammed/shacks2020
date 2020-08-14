@@ -4,16 +4,78 @@
   src: url("fonts/futurebold.ttf");
 }
 
+@font-face {
+  font-family: 'futuraheavy';
+  src: url("fonts/futuraheavy.ttf");
+}
+
+.blb {
+  font-family: 'Open Sans';
+}
+
+.blb a {
+  color: white;
+  text-shadow: #fff2 0px 0px 10px;
+}
+
 .blb-tit {
-  font-size: 45px;
-  font-family: 'arial';
-  letter-spacing: 3px;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'futuraheavy';
+  letter-spacing: 1px;
   color: white;
   font-weight: 600;
+  text-shadow: 2px 2px #0007;
 }
 
 .blb-tit > span {
   color: #15795d;
+  text-shadow: 1px 1px #fff7;
+}
+
+.blb-links {
+  margin-top: 30px;
+  width: 400px;
+  color: white;
+  font-size: 18px;
+}
+
+.blb-links > ul {
+  margin-left: -40px !important;
+  list-style: none;
+}
+
+.blb-sub {
+  width: 400px;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.blb > div > ul {
+  margin: 0;
+}
+
+.blb-definiton {
+  text-align: left;
+  width: 400px;
+  margin-top: 30px;
+  color: white;
+  font-size: 18px;
+}
+
+.blb-instructions {
+  width: 400px;
+  margin-top: 30px;
+  color: white;
+  font-size: 18px;
+}
+
+.blb-socials {
+  margin-top: 30px;
+  width: 400px;
+  color: white;
+  font-size: 18px;
 }
 
 .bod {
@@ -22,7 +84,7 @@
 
 .bod-left {
   position: fixed;
-  left: calc(50% - 200px);
+  left: calc(50% - 150px);
   top: 50%;
   height: 875px;
   -webkit-transform: translateY(-50%) translateX(-100%) scale(0.75);
@@ -80,7 +142,7 @@
 body,
 html {
   overflow: hidden;
-  background-color: red;
+  background-color: #ec111b;
 }
 
 @media (max-width: 500px) and (max-height: 700px) {
@@ -92,7 +154,7 @@ html {
 
 .content {
   position: relative;
-  background-color: #f6f6f6;
+  background-color: #fff;
   padding: 0 2px;
   margin: 0 2px;
   width: calc(100%-4px);

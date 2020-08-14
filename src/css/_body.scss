@@ -12,23 +12,73 @@ $spec-font: 'Open Sans';
 	font-family: 'futurabold';
 	src: url('fonts/futurebold.ttf');
 }
+@font-face {
+	font-family: 'futuraheavy';
+	src: url('fonts/futuraheavy.ttf');
+}
 .blb {
+	font-family: 'Open Sans';
+	& a {
+		color: white;
+		text-shadow: #fff2 0px 0px 10px;
+	}
 	&-tit {
-		font-size: 45px;
-		font-family: 'arial';
-		letter-spacing: 3px;
+		text-align: center;
+		font-size: 40px;
+		font-family: 'futuraheavy';
+		letter-spacing: 1px;
 		color: white;
 		font-weight: 600;
+		text-shadow: 2px 2px #0007;
 		& > span {
 			color: #15795d;
+			text-shadow: 1px 1px #fff7;
 		}
+	}
+	&-links {
+		margin-top: 30px;
+		width: 400px;
+		color: white;
+		font-size: 18px;
+		& > ul {
+			margin-left: -40px !important;
+			list-style: none;
+		}
+	}
+	&-sub {
+		width: 400px;
+		text-align: center;
+		color: white;
+		font-size: 25px;
+	}
+	& > div > ul {
+		margin: 0;
+	}
+	&-definiton {
+		text-align: left;
+		width: 400px;
+		margin-top: 30px;
+		color: white;
+		font-size: 18px;
+	}
+	&-instructions {
+		width: 400px;
+		margin-top: 30px;
+		color: white;
+		font-size: 18px;
+	}
+	&-socials {
+		margin-top: 30px;
+		width: 400px;
+		color: white;
+		font-size: 18px;
 	}
 }
 .bod {
 	position: relative;
 	&-left {
 		position: fixed;
-		left: calc(50% - 200px);
+		left: calc(50% - 150px);
 		top: 50%;
 
 		height: 875px;
@@ -73,14 +123,14 @@ $spec-font: 'Open Sans';
 body,
 html {
 	overflow: hidden;
-	background-color: red;
+	background-color: #ec111b;
 	@include mobile() {
 		background-color: #fff;
 	}
 }
 .content {
 	position: relative;
-	background-color: #f6f6f6;
+	background-color: #fff;
 	padding: 0 2px;
 	margin: 0 2px;
 	width: calc(100%-4px);
