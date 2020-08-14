@@ -15,13 +15,15 @@
   z-index: -1;
   top: 50%;
   right: 50%;
-  -webkit-transform: translateX(50%) translateY(-50%);
-          transform: translateX(50%) translateY(-50%);
+  -webkit-transform: translateX(50%) translateY(-50%) scale(0.75);
+          transform: translateX(50%) translateY(-50%) scale(0.75);
 }
 
-@media (max-width: 500px), (max-height: 900px) {
+@media (max-width: 500px) and (max-height: 600px) {
   .bod-phone {
     display: none;
+    -webkit-transform: translateX(50%) translateY(-50%);
+            transform: translateX(50%) translateY(-50%);
   }
 }
 
@@ -32,8 +34,8 @@
   position: fixed;
   top: 50%;
   right: 50%;
-  -webkit-transform: translateX(50%) translateY(-50%);
-          transform: translateX(50%) translateY(-50%);
+  -webkit-transform: translateX(50%) translateY(-50%) scale(0.75);
+          transform: translateX(50%) translateY(-50%) scale(0.75);
   z-index: -1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -41,7 +43,7 @@
   padding: 64px 36px 35px;
 }
 
-@media (max-width: 500px), (max-height: 900px) {
+@media (max-width: 500px) and (max-height: 600px) {
   .bod-content {
     width: 100vw;
     height: 100vh;
@@ -49,6 +51,8 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 0;
+    -webkit-transform: translateX(50%) translateY(-50%);
+            transform: translateX(50%) translateY(-50%);
   }
 }
 
@@ -58,7 +62,7 @@ html {
   background-color: red;
 }
 
-@media (max-width: 500px), (max-height: 900px) {
+@media (max-width: 500px) and (max-height: 600px) {
   body,
   html {
     background-color: #fff;
@@ -85,7 +89,7 @@ html {
           flex-direction: column;
 }
 
-@media (max-width: 500px), (max-height: 900px) {
+@media (max-width: 500px) and (max-height: 600px) {
   .content {
     border-radius: 0;
     margin: 0;
@@ -168,6 +172,16 @@ html {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content-chat > .d {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-height: 550px;
 }
 
 .content-base {
@@ -183,7 +197,7 @@ html {
   border-radius: 30px;
 }
 
-@media (max-width: 500px), (max-height: 900px) {
+@media (max-width: 500px) and (max-height: 600px) {
   .content-base {
     border-radius: 0;
     border-top-right-radius: 30px;
@@ -229,7 +243,7 @@ html {
           user-select: none;
 }
 
-@media (max-width: 500px), (max-height: 900px) {
+@media (max-width: 500px) and (max-height: 600px) {
   .cnh-img {
     margin-top: 5px;
   }
@@ -269,7 +283,7 @@ html {
   border-radius: 30px;
 }
 
-@media (max-width: 500px), (max-height: 900px) {
+@media (max-width: 500px) and (max-height: 600px) {
   .cnb-con {
     border-radius: 0;
     border-top-right-radius: 30px;
@@ -296,10 +310,31 @@ html {
   color: #000;
   overflow-y: auto;
   font-family: Arial, Helvetica, sans-serif;
+  behavior: 'smooth';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chat-con::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+.chat-con::-webkit-scrollbar {
+  width: 1px;
+  background-color: #f5f5f5;
+}
+
+.chat-con::-webkit-scrollbar-thumb {
+  background-color: #000000;
 }
 
 .chat-message {
-  padding: 10px 20px 0;
+  padding: 5px 20px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +344,6 @@ html {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-bottom: 15px;
 }
 
 .chat-message.nova {
@@ -335,6 +369,11 @@ html {
   color: #000;
   max-width: 175px;
   padding: 10px;
+}
+
+.chat-bubble span > a, .chat-bubble span > a:active, .chat-bubble span > a:visited, .chat-bubble span > a:hover {
+  color: lightskyblue;
+  text-decoration: none;
 }
 
 .chat-person {
@@ -371,7 +410,7 @@ html {
 }
 
 .sl:active, .sl, .sl:hover, .sl:visited {
-  color: black;
+  color: black !important;
   text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */

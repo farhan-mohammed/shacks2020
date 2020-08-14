@@ -4,7 +4,7 @@ $dg: #15795d;
 $pink: #ec111b;
 $spec-font: 'Open Sans';
 @mixin mobile() {
-	@media (max-width: 500px), (max-height: 900px) {
+	@media (max-width: 500px) and(max-height: 600px) {
 		@content;
 	}
 }
@@ -21,9 +21,10 @@ $spec-font: 'Open Sans';
 		z-index: -1;
 		top: 50%;
 		right: 50%;
-		transform: translateX(50%) translateY(-50%);
+		transform: translateX(50%) translateY(-50%) scale(0.75);
 		@include mobile() {
 			display: none;
+			transform: translateX(50%) translateY(-50%);
 		}
 	}
 	&-content {
@@ -33,7 +34,7 @@ $spec-font: 'Open Sans';
 		position: fixed;
 		top: 50%;
 		right: 50%;
-		transform: translateX(50%) translateY(-50%);
+		transform: translateX(50%) translateY(-50%) scale(0.75);
 		z-index: -1;
 		box-sizing: border-box;
 		color: #fff;
@@ -44,6 +45,7 @@ $spec-font: 'Open Sans';
 			max-height: 100vh;
 			box-sizing: border-box;
 			padding: 0;
+			transform: translateX(50%) translateY(-50%);
 		}
 	}
 }
@@ -128,6 +130,11 @@ html {
 	}
 	&-chat {
 		flex: 1;
+		display: flex;
+		& > .d {
+			flex: 0 0 100%;
+			max-height: 550px;
+		}
 	}
 	&-base {
 		flex: 0 0 75px;
@@ -221,13 +228,28 @@ html {
 		color: #000;
 		overflow-y: auto;
 		font-family: Arial, Helvetica, sans-serif;
+		behavior: 'smooth';
+
+		display: flex;
+		flex-direction: column;
+		&::-webkit-scrollbar-track {
+			background-color: #f5f5f5;
+		}
+
+		&::-webkit-scrollbar {
+			width: 1px;
+			background-color: #f5f5f5;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #000000;
+		}
 	}
 	&-message {
-		padding: 10px 20px 0;
+		padding: 5px 20px 5px;
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-end;
-		margin-bottom: 15px;
 		&.nova {
 			flex-direction: row-reverse;
 			& > .chat-bubble {
@@ -246,6 +268,15 @@ html {
 		color: #000;
 		max-width: 175px;
 		padding: 10px;
+		& span > a {
+			&,
+			&:active,
+			&:visited,
+			&:hover {
+				color: lightskyblue;
+				text-decoration: none;
+			}
+		}
 	}
 	&-person {
 		width: 30px;
@@ -274,7 +305,7 @@ html {
 	&,
 	&:hover,
 	&:visited {
-		color: black;
+		color: black !important;
 		text-decoration: none;
 	}
 }
